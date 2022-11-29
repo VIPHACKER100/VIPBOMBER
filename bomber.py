@@ -180,8 +180,8 @@ def check_for_updates():
         mesgdcrt.GeneralMessage("Starting update...")
         update()
     else:
-        mesgdcrt.SuccessMessage("TBomb is up-to-date")
-        mesgdcrt.GeneralMessage("Starting TBomb")
+        mesgdcrt.SuccessMessage("VIPBOMBER is up-to-date")
+        mesgdcrt.GeneralMessage("Starting VIPHACKER.100")
 
 
 def notifyen():
@@ -243,7 +243,7 @@ def pretty_print(cc, target, success, failed):
     mesgdcrt.GeneralMessage("Failed       : " + str(failed))
     mesgdcrt.WarningMessage(
         "This tool was made for fun and research purposes only")
-    mesgdcrt.SuccessMessage("TBomb was created by SpeedX")
+    mesgdcrt.SuccessMessage("TBomb was created by VIPHACKER.100")
 
 
 def workernode(mode, cc, target, count, delay, max_threads):
@@ -263,7 +263,7 @@ def workernode(mode, cc, target, count, delay, max_threads):
         "This tool was made for fun and research purposes only")
     print()
     input(mesgdcrt.CommandMessage(
-        "Press [CTRL+Z] to suspend the bomber or [ENTER] to resume it"))
+        "Press [CTRL+Z] to suspend the VIPBOMBER or [ENTER] to resume it"))
 
     if len(APIProvider.api_providers) == 0:
         mesgdcrt.FailureMessage("Your country/target is not supported yet")
@@ -310,12 +310,12 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit = {"sms": 500, "call": 15, "mail": 200}
+        max_limit = {"sms": 5000, "call": 15, "mail": 200}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
             if cc != "91":
-                max_limit.update({"sms": 100})
+                max_limit.update({"sms": 1000})
         elif mode == "mail":
             target = get_mail_info()
         else:
