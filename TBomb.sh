@@ -115,13 +115,13 @@ do
     read ch
     clear
     if [ $ch -eq 1 ];then
-        $PYTHON bomber.py --sms
+        tbomb
         exit
     elif [ $ch -eq 2 ];then
-        $PYTHON bomber.py --call
+        tbomb
         exit
     elif [ $ch -eq 3 ];then
-        $PYTHON bomber.py --mail 
+        tbomb 
         exit
     elif [ $ch -eq 4 ];then
         echo -e "\e[1;34m Downloading Latest Files..."
